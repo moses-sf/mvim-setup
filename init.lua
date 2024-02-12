@@ -13,9 +13,12 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 
 -- Keymaps
-keymap("n", "<leader>e", ":Neotree\n")
-keymap("n", "<leader>l", ":Lazy\n")
+keymap("n", "<leader>e", ":Neotree<CR>")
+keymap("n", "<leader>l", ":Lazy<CR>")
+keymap("n", "<leader>gg", ":LazyGit<CR>")
+keymap("n", "<leader>dd", ":LazyDocker<CR>")
 
+-- Initialize lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
